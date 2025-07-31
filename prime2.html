@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+  <link rel="icon" href="Screenshot 2025-07-20 231757.png" />
+  <link rel="stylesheet" href="prime2.css" type="text/css" />
+  
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url("WhatsApp Image 2025-07-22 at 23_LE_upscale_strong_enhance_faces_x4 (1).jpg");
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      height: 100vh;
+      font-family: 'Ubuntu Condensed', sans-serif;
+      color: white;
+    }
+
+    h1 {
+      font-size: 28px;
+      text-align: center;
+      margin-top: 20px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .home-container {
+      position: relative;
+      height: 100px;
+    }
+
+    .home-btn {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 10px 20px;
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+      border-radius: 50px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .home-btn:hover {
+      background-color: #ffb700;
+      color: black;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+    }
+
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar-menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar-menu li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .navbar-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      width: 30px;
+      height: 30px;
+      filter: invert(1);
+      transition: transform 0.3s ease;
+    }
+
+    .navbar-toggle.active .menu-icon {
+      transform: rotate(90deg);
+    }
+
+    .selector-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      gap: 10px;
+    }
+
+    select {
+      padding: 6px 12px;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 6px 14px;
+      font-size: 16px;
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        right: 20px;
+        top: 60px;
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+
+      .navbar-menu.active {
+        display: flex;
+      }
+
+      .navbar-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome 😊</h1>
+
+  <div class="home-container">
+    <a href="prime.html">
+      <button class="home-btn">🏠 Home</button>
+    </a>
+  </div>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="prime2.html" class="navbar-logo">
+        <span class="red-dot">●</span> <span>PRIME APTIV</span> <span class="red-dot">●</span>
+      </a>
+      <button class="navbar-toggle" id="menu-toggle">
+        <img src="menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="menu" class="menu-icon" />
+      </button>
+      <ul class="navbar-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="prime3.html">About</a></li>
+        <li><a href="prime4.html">Location</a></li>
+        <li><a href="prime4.html">Contacts</a></li>
+        <li><a href="prime5.html">Total Stock</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="selector-container">
+    <label for="way">Lines</label>
+    <select id="way">
+      <option value="16way">16 way</option>
+      <option value="52way">52 way</option>
+      <option value="38way">38 way</option>
+      <option value="14way">14 way</option>
+      <option value="8way">8 way</option>
+      <option value="4way">4 way</option>
+    </select>
+    <button onclick="confirmSelection()">Confirm</button>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const menu = document.querySelector('.navbar-menu');
+
+    toggleBtn.addEventListener('click', () => {
+      toggleBtn.classList.toggle('active');
+      menu.classList.toggle('active');
+    });
+
+    function confirmSelection() {
+      const way = document.getElementById("way").value;
+      window.location.href = way + ".html"; // e.g., 16way.html
+    }
+  </script>
+  <script src="prime2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+h1 {
+  position: absolute;
+  top: 15%;
+  left: 1%;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  min-height: 100vh;
+  background: url("WhatsApp Image 2025-07-22 at 23.06.58_c5615c99.jpg") no-repeat center center / cover;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 100%; /* Changed from 100px to full width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.13); /* semi-transparent */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2rem;
+  max-width: 1600px;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: all 0.7s ease;
+  white-space: nowrap;
+}
+
+ .navbar-container .navbar-menu li a:hover,
+ .navbar-container .navbar-menu li a.active {
+  color: #162530;
+  background: rgba(188, 212, 229, 0.8);
+  border: 2px solid #fff;
+}
+
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  transition: transform 0.3s ease;
+
+}
+
+@media (max-width: 880px) {
+  .navbar {
+    backdrop-filter: none;
+  }
+
+  .navbar-container .navbar-menu {
+    display: none;
+    flex-direction: column;
+    gap: 1.7rem !important;
+    position: absolute;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    right: 0;
+    padding: 5rem 1.5rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .navbar-container .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+    z-index: 999;
+  }
+
+  .navbar-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .navbar-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
+  .navbar-logo {
+    font-size: 1.2rem;
+    padding: 3px 15px;
+  }
+}
+
+.red-dot {
+  color: red;
+  font-size: 16px;
+  margin: 0 6px;
+  vertical-align: middle;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+}
+
+.selector-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+label {
+  font-size: 16px;
+}
+
+select {
+  padding: 6px 12px;
+  font-size: 16px;
+}
+
+button {
+  padding: 6px 14px;
+  font-size: 16px;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
