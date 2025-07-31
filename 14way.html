@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>14 Way - Lines</title>
+  <link rel="stylesheet" href="14way.css" />
+</head>
+<body>
+  <div class="lines-box">
+    <h2>Lines - 14 Way</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Total Stock</th>
+          <th>Current Stock</th>
+          <th>Return</th>
+          <th>Rejection</th>
+          <th>Wastage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HOUSING</td>
+          <td><input type="number" id="housingTotal14" value="0" /></td>
+          <td><input type="number" id="housingCurrent14" readonly /></td>
+          <td><input type="number" id="housingReturn14" value="0" /></td>
+          <td><input type="number" id="housingRejection14" value="0" /></td>
+          <td><input type="number" id="housingWastage14" value="0" /></td>
+        </tr>
+        <tr>
+          <td>TPA</td>
+          <td><input type="number" id="tpaTotal14" value="0" /></td>
+          <td><input type="number" id="tpaCurrent14" readonly /></td>
+          <td><input type="number" id="tpaReturn14" value="0" /></td>
+          <td><input type="number" id="tpaRejection14" value="0" /></td>
+          <td><input type="number" id="tpaWastage14" value="0" /></td>
+        </tr>
+        <tr>
+          <td>SEAL</td>
+          <td><input type="number" id="sealTotal14" value="0" /></td>
+          <td><input type="number" id="sealCurrent14" readonly /></td>
+          <td><input type="number" id="sealReturn14" value="0" /></td>
+          <td><input type="number" id="sealRejection14" value="0" /></td>
+          <td><input type="number" id="sealWastage14" value="0" /></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="boxes">
+      <div>
+        <label for="todayProd14">Today's Production</label>
+        <input type="number" id="todayProd14" value="0" />
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="save14WayData()">💾 Save</button>
+      <button onclick="print14WayData()">🖨️ Print / Export PDF</button>
+      <button onclick="show14WayHistory()">📜 History</button>
+      <button onclick="clear14WayHistory()">🗑️ Delete History</button>
+      <button onclick="reset14WayData()">🔄 Reset</button>
+    </div>
+
+    <div id="history14"></div>
+  </div>
+
+  <script src="14way.js"></script>
+</body>
+</html>
