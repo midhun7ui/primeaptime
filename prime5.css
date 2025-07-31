@@ -1,0 +1,67 @@
+h1 {
+    position: absolute;
+    margin: 0;
+  top: 20%;
+  left: 20%;
+  font-size: 40px;
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 200vh; /* For scroll testing */
+  background: #f2f2f2;
+}
+
+.count-box {
+  position: sticky;  /* Sticky keeps it at top as you scroll */
+  top: 20px;
+  left: 40px;
+  background: white;
+  padding: 20px 30px;
+  border: 2px solid #00aaff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  width: max-content;
+  cursor: move;
+}
+
+.count-value {
+  font-size: 48px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.edit-input {
+  font-size: 24px;
+  padding: 6px 10px;
+  width: 100px;
+  display: none;
+}
+
+.button {
+  background-color: #00aaff;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  margin-top: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0077cc;
+}
+
+@media (max-width: 600px) {
+  .count-box {
+    left: 10px;
+    top: 10px;
+    font-size: 14px;
+  }
+}
