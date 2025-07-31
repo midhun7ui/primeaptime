@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>52 Way Stock Tables</title>
+  <link rel="stylesheet" href="52way.css" />
+</head>
+<body>
+  <div class="table-container">
+    <!-- First Table -->
+    <div class="lines-box">
+      <h2>52 Way (13707581)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Total Stock</th>
+            <th>Today Production</th>
+            <th>Return</th>
+            <th>Rejection</th>
+            <th>Wastage</th>
+            <th>Current Stock</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Housing</td>
+            <td><input type="number" id="housingTotal1" value="0" oninput="calculateStock1()"></td>
+            <td rowspan="2"><input type="number" id="todayProd1" value="0" oninput="calculateStock1()"></td>
+            <td rowspan="2"><input type="number" id="return1" value="0" oninput="calculateStock1()"></td>
+            <td rowspan="2"><input type="number" id="rejection1" value="0" oninput="calculateStock1()"></td>
+            <td rowspan="2"><input type="number" id="wastage1" value="0" oninput="calculateStock1()"></td>
+            <td><input type="number" id="housingCurrent1" readonly></td>
+          </tr>
+          <tr>
+            <td>Lever</td>
+            <td><input type="number" id="leverTotal1" value="0" oninput="calculateStock1()"></td>
+            <td><input type="number" id="leverCurrent1" readonly></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="btn-group">
+        <button onclick="window.print()">Print</button>
+        <button onclick="saveTable1()">Save</button>
+        <button onclick="showHistory('table1History')">History</button>
+      </div>
+      <div id="table1History" class="history-box"></div>
+    </div>
+
+    <!-- Second Table -->
+    <div class="lines-box">
+      <h2>52 Way (13707967)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Total Stock</th>
+            <th>Today Production</th>
+            <th>Return</th>
+            <th>Rejection</th>
+            <th>Wastage</th>
+            <th>Current Stock</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Housing</td>
+            <td><input type="number" id="housingTotal2" value="0" oninput="calculateStock2()"></td>
+            <td rowspan="2"><input type="number" id="todayProd2" value="0" oninput="calculateStock2()"></td>
+            <td rowspan="2"><input type="number" id="return2" value="0" oninput="calculateStock2()"></td>
+            <td rowspan="2"><input type="number" id="rejection2" value="0" oninput="calculateStock2()"></td>
+            <td rowspan="2"><input type="number" id="wastage2" value="0" oninput="calculateStock2()"></td>
+            <td><input type="number" id="housingCurrent2" readonly></td>
+          </tr>
+          <tr>
+            <td>Lever</td>
+            <td><input type="number" id="leverTotal2" value="0" oninput="calculateStock2()"></td>
+            <td><input type="number" id="leverCurrent2" readonly></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="btn-group">
+        <button onclick="window.print()">Print</button>
+        <button onclick="saveTable2()">Save</button>
+        <button onclick="showHistory('table2History')">History</button>
+      </div>
+      <div id="table2History" class="history-box"></div>
+    </div>
+  </div>
+  <script src="52way.js"></script>
+</body>
+</html>
