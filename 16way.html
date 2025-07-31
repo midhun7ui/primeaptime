@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>16 way</title>
+  <link rel="stylesheet" href="16way.css" />
+</head>
+<body>
+  <div class="actions">
+    <button onclick="saveAndCalculate()">Save</button>
+    <button onclick="exportToExcel()">Export to Excel</button>
+    <button onclick="window.print()">Print</button>
+    <button onclick="showHistory()">History</button>
+    <button onclick="clearHistory()">Delete History</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Line</th>
+        <th>Item</th>
+        <th>Total Stock</th>
+        <th>Today Production</th>
+        <th>Rejection</th>
+        <th>Return</th>
+        <th>Wastage</th>
+        <th>Current Stock</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="6">16 WAY<br>[35554313]</td>
+        <td>Green Seal</td>
+        <td><input id="total-green" type="number"></td>
+        <td rowspan="6"><input id="prod-16way" type="number"></td>
+        <td><input id="rejection-green" type="number"></td>
+        <td><input id="return-green" type="number"></td>
+        <td><input id="wastage-green" type="number"></td>
+        <td id="stock-green">0</td>
+      </tr>
+      <tr>
+        <td>Housing</td>
+        <td><input id="total-housing" type="number"></td>
+        <td><input id="rejection-housing" type="number"></td>
+        <td><input id="return-housing" type="number"></td>
+        <td><input id="wastage-housing" type="number"></td>
+        <td id="stock-housing">0</td>
+      </tr>
+      <tr>
+        <td>Connecter</td>
+        <td><input id="total-connecter" type="number"></td>
+        <td><input id="rejection-connecter" type="number"></td>
+        <td><input id="return-connecter" type="number"></td>
+        <td><input id="wastage-connecter" type="number"></td>
+        <td id="stock-connecter">0</td>
+      </tr>
+      <tr>
+        <td>TPA</td>
+        <td><input id="total-tpa" type="number"></td>
+        <td><input id="rejection-tpa" type="number"></td>
+        <td><input id="return-tpa" type="number"></td>
+        <td><input id="wastage-tpa" type="number"></td>
+        <td id="stock-tpa">0</td>
+      </tr>
+      <tr>
+        <td>Retainer</td>
+        <td><input id="total-retainer" type="number"></td>
+        <td><input id="rejection-retainer" type="number"></td>
+        <td><input id="return-retainer" type="number"></td>
+        <td><input id="wastage-retainer" type="number"></td>
+        <td id="stock-retainer">0</td>
+      </tr>
+      <tr>
+        <td>Blue Seal</td>
+        <td><input id="total-blue" type="number"></td>
+        <td><input id="rejection-blue" type="number"></td>
+        <td><input id="return-blue" type="number"></td>
+        <td><input id="wastage-blue" type="number"></td>
+        <td id="stock-blue">0</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div id="history-output" style="margin-top: 30px;"></div>
+
+  <script src="16way.js"></script>
+</body>
+</html>
