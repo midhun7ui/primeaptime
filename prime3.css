@@ -1,0 +1,114 @@
+h1 {
+     position: absolute;
+  top: 0%;
+  left: 45.5%;
+  font-size: 55px;
+  text-shadow:0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.ubuntu-condensed-regular {
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+    position: absolute;
+    margin: 0;
+  top: 17%;
+  left: 1.5%;
+  font-size: 25px;
+  color: aliceblue;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+h3 {
+    position: absolute;
+    margin: 0;
+  top: 17%;
+  left: 23%;
+  font-size: 25px;
+  color: aliceblue;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+  @media (max-width: 600px) {
+    h2 {
+      font-size: 25px;
+    }
+    h3 {
+      font-size: 25;
+    }
+  }
+
+  @media (min-width: 601px) {
+    h2 {
+      font-size: 27px;
+    }
+    h3 {
+      font-size: 27px;
+    }
+  }
+
+  h4 {
+    position: absolute;
+    margin: 0;
+  top: 30%;
+  left: 15.9%;
+  font-size: 25px;
+  color: aliceblue;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+  @media (max-width: 600px) {
+    h4 {
+      font-size: 25px;
+    }
+  }
+
+  h5 {
+    position: absolute;
+    margin: 0;
+  top: 30%;
+  left: 23%;
+  font-size: 25px;
+  color: aliceblue;
+  font-family: 'Courier New', Courier, monospace;
+  }
+
+   @media (max-width: 600px) {
+    h5 {
+      font-size: 25px;
+    }
+  }
+
+  h6 {
+    position: absolute;
+    margin: 0;
+  top: 40%;
+  left: 0.5%;
+  font-size: 25px;
+  color: aliceblue;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+ @media (max-width: 600px) {
+    h6 {
+      font-size: 25px;
+    }
+  }
+
+  p {
+    position: absolute;
+    margin: 0;
+  top: 75.5%;
+  left: 0.5%;
+  font-size: 25px;
+  color: aliceblue;
+  font-family: 'Courier New', Courier, monospace;
+}
+ @media (max-width: 600px) {
+    p {
+      font-size: 25px;
+    }
+  }
