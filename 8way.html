@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>8 Way - Lines</title>
+  <link rel="stylesheet" href="8way.css">
+</head>
+<body>
+  <div class="lines-box">
+    <h2>Lines - 8 Way</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Total Stock</th>
+          <th>Return</th>
+          <th>Rejection</th>
+          <th>Wastage</th>
+          <th>Current Stock</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HOUSING</td>
+          <td><input type="number" id="housingTotal8" value="0" /></td>
+          <td><input type="number" id="housingReturn8" value="0" /></td>
+          <td><input type="number" id="housingRejection8" value="0" /></td>
+          <td><input type="number" id="housingWastage8" value="0" /></td>
+          <td><input type="number" id="housingCurrent8" readonly /></td>
+        </tr>
+        <tr>
+          <td>TPA</td>
+          <td><input type="number" id="tpaTotal8" value="0" /></td>
+          <td><input type="number" id="tpaReturn8" value="0" /></td>
+          <td><input type="number" id="tpaRejection8" value="0" /></td>
+          <td><input type="number" id="tpaWastage8" value="0" /></td>
+          <td><input type="number" id="tpaCurrent8" readonly /></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="boxes">
+      <div>
+        <label for="todayProduction8">Today's Production</label>
+        <input type="number" id="todayProduction8" value="0" />
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="save8WayData()">💾 Save</button>
+      <button onclick="showHistory()">📜 History</button>
+      <button onclick="window.print()">🖨️ Print</button>
+      <button onclick="deleteHistory()">🗑️ Delete History</button>
+      <button onclick="resetAll()">🔁 Reset All</button>
+    </div>
+
+    <div id="history8" class="history"></div>
+  </div>
+
+  <script src="8way.js"></script>
+</body>
+</html>
