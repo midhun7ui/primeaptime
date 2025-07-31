@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APTIV STOCK HOLDER</title>
+  <link rel="icon" href="Screenshot 2025-07-20 231757.png">
+  <link rel="stylesheet" href="prime.css" type="text/css">
+</head>
+<body>
+
+  <h1>APTIV STOCK HOLDER</h1>
+
+  <div class="top-buttons">
+    <button onclick="showSignn()">Sign In</button>
+    <button onclick="showSignUp()">Sign Up</button>
+  </div>
+
+  <div class="container" id="container">
+
+    <div class="form-container sign-in">
+      <h2>Sign In</h2>
+      <form onsubmit="return validateLogin()">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit" class="signin-btn">Login</button>
+      </form>
+    </div>
+
+    <div class="form-container sign-up">
+      <h2>Sign Up</h2>
+      <form>
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit" class="signup-btn">Register</button>
+      </form>
+    </div>
+
+  </div>
+  <style>
+    body {
+       @media screen and (max-width: 1440px) {
+
+    }
+
+    h1 {
+        font-size: 30px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        margin: 0;
+    }
+    @media (max-width: 400px) {
+        h1 {
+            font-size: 28px;
+        }
+    }
+  }
+  </style>
+
+  <script>
+    function validateLogin() {
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (username === "" || password === "") {
+        alert("Please fill in both username and password.");
+        return false;
+      }
+
+      window.location.href = "prime2.html";
+      return false;
+    }
+  </script>
+
+  <script src="prime.js"></script>
+</body>
+</html>
