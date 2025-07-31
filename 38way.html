@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>38 Way - Lines</title>
+  <link rel="stylesheet" href="38way.css">
+</head>
+<body>
+  <div class="lines-box">
+    <h2>Lines - 38 Way</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Total Stock</th>
+          <th>Current Stock</th>
+          <th>Return</th>
+          <th>Rejection</th>
+          <th>Wastage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HOUSING</td>
+          <td><input type="number" id="housingTotal" value="0" /></td>
+          <td><input type="number" id="housingCurrent" readonly /></td>
+          <td><input type="number" id="housingReturn" value="0" /></td>
+          <td><input type="number" id="housingRejection" value="0" /></td>
+          <td><input type="number" id="housingWastage" value="0" /></td>
+        </tr>
+        <tr>
+          <td>CPA</td>
+          <td><input type="number" id="cpaTotal" value="0" /></td>
+          <td><input type="number" id="cpaCurrent" readonly /></td>
+          <td><input type="number" id="cpaReturn" value="0" /></td>
+          <td><input type="number" id="cpaRejection" value="0" /></td>
+          <td><input type="number" id="cpaWastage" value="0" /></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="boxes">
+      <div>
+        <label for="todayProduction">Today's Production</label>
+        <input type="number" id="todayProduction" value="0" />
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="saveData()">💾 Save</button>
+      <button onclick="printPage()">🖨️ Print / Export PDF</button>
+      <button onclick="showHistory()">📜 History</button>
+      <button onclick="deleteHistory()">🗑️ Delete History</button>
+    </div>
+
+    <div id="historyBox"></div>
+  </div>
+
+  <script src="38way.js"></script>
+</body>
+</html>
