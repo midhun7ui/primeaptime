@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>8 Way - Lines</title>
+  <link rel="stylesheet" href="8way.css" />
+</head>
+<body>
+  <div class="lines-box">
+    <h2>Lines - 8 Way</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Total Stock</th>
+          <th>Incoming Stock</th>
+          <th>Return</th>
+          <th>Rejection</th>
+          <th>Current Stock</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HOUSING</td>
+          <td><input type="number" id="housingTotal8" /></td>
+          <td><input type="number" id="housingIncoming8" /></td>
+          <td><input type="number" id="housingReturn8" /></td>
+          <td><input type="number" id="housingRejection8" /></td>
+          <td><input type="number" id="housingCurrent8" readonly /></td>
+        </tr>
+        <tr>
+          <td>TPA</td>
+          <td><input type="number" id="tpaTotal8" /></td>
+          <td><input type="number" id="tpaIncoming8" /></td>
+          <td><input type="number" id="tpaReturn8" /></td>
+          <td><input type="number" id="tpaRejection8" /></td>
+          <td><input type="number" id="tpaCurrent8" readonly /></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="boxes">
+      <label for="todayProduction8">Today's Production</label>
+      <input type="number" id="todayProduction8" />
+    </div>
+
+    <div class="buttons">
+      <button onclick="save8WayData()">💾 Save</button>
+      <button onclick="showHistory()">📜 History</button>
+      <button onclick="window.print()">🖨️ Print</button>
+      <button onclick="deleteHistory()">🗑️ Delete History</button>
+      <button onclick="resetAll()">🔁 Reset All</button>
+    </div>
+
+    <div id="history8" class="history"></div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js"></script>
+    <script src="8way.js"></script>
+  </div>
+</body>
+</html>
