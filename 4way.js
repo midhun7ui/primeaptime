@@ -41,9 +41,6 @@ window.save4WayData = function () {
 
   localStorage.setItem('4WayData', JSON.stringify(data));
   set(ref(db, "stockData4way"), data)
-  .then(() => console.log("✅ Firebase write success"))
-  .catch(err => console.error("❌ Firebase write failed:", err));
-
   const timestamp = new Date().toLocaleString();
   const history = JSON.parse(localStorage.getItem('4WayHistory') || '[]');
   const entry = [
@@ -130,4 +127,5 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('todayProd4').addEventListener('input', calculateStock4);
   calculateStock4();
   view4WayHistory();
+
 });
