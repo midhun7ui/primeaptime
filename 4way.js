@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAqnhWsCm-h2hVViW2zKFCnK6_iC-j9DeE",
@@ -40,8 +40,9 @@ window.save4WayData = function () {
   });
 
   localStorage.setItem('4WayData', JSON.stringify(data));
-  set(ref(db, "stockData4way"), data);
-
+  set(ref(db, "stockData4way"), data)
+  .then(() => console.log("✅ Firebase write success"))
+  .catch(err => console.error("❌ Firebase write failed:", err));
   const timestamp = new Date().toLocaleString();
   const history = JSON.parse(localStorage.getItem('4WayHistory') || '[]');
   const entry = [
@@ -130,3 +131,4 @@ window.addEventListener('DOMContentLoaded', () => {
   view4WayHistory();
 
 });
+
