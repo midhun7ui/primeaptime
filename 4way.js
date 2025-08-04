@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAqnhWsCm-h2hVViW2zKFCnK6_iC-j9DeE",
@@ -129,3 +129,4 @@ window.addEventListener('DOMContentLoaded', () => {
   view4WayHistory();
 
 });
+
