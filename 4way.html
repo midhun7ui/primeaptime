@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>4-Way Stock Tracker</title>
+  <link rel="stylesheet" href="4way.css" />
+</head>
+<body>
+  <div class="lines-box">
+    <h2>Lines - 4 Way</h2>
+    <label style="display:block; text-align:center; margin-bottom:15px;">
+      <strong>Today's Production:</strong>
+      <input id="todayProd4" value="0" style="width:100px;" oninput="calculateStock4()" />
+    </label>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Total Stock</th>
+          <th>Incoming Stock</th>
+          <th>Current Stock</th>
+          <th>Return</th>
+          <th>Rejection</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Housing</td>
+          <td><input id="housingTotal4" value="0" oninput="calculateStock4()" /></td>
+          <td><input id="housingIncoming4" value="0" oninput="calculateStock4()" /></td>
+          <td><input id="housingCurrent4" readonly /></td>
+          <td><input id="housingReturn4" value="0" /></td>
+          <td><input id="housingReject4" value="0" /></td>
+        </tr>
+        <tr>
+          <td>CPA</td>
+          <td><input id="cpaTotal4" value="0" oninput="calculateStock4()" /></td>
+          <td><input id="cpaIncoming4" value="0" oninput="calculateStock4()" /></td>
+          <td><input id="cpaCurrent4" readonly /></td>
+          <td><input id="cpaReturn4" value="0" /></td>
+          <td><input id="cpaReject4" value="0" /></td>
+        </tr>
+        <tr>
+          <td>TPA</td>
+          <td><input id="tpaTotal4" value="0" oninput="calculateStock4()" /></td>
+          <td><input id="tpaIncoming4" value="0" oninput="calculateStock4()" /></td>
+          <td><input id="tpaCurrent4" readonly /></td>
+          <td><input id="tpaReturn4" value="0" /></td>
+          <td><input id="tpaReject4" value="0" /></td>
+        </tr>
+        <tr>
+          <td>Seal</td>
+          <td><input id="sealTotal4" value="0" oninput="calculateStock4()" /></td>
+          <td><input id="sealIncoming4" value="0" oninput="calculateStock4()" /></td>
+          <td><input id="sealCurrent4" readonly /></td>
+          <td><input id="sealReturn4" value="0" /></td>
+          <td><input id="sealReject4" value="0" /></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="buttons">
+      <button onclick="save4WayData()">💾 Save</button>
+      <button onclick="view4WayHistory()">📜 History</button>
+      <button onclick="delete4WayHistory()">🗑️ Delete History</button>
+      <button onclick="reset4WayForm()">🔄 Reset Form</button>
+      <button onclick="print4WayTable()">🖨️ Print</button>
+    </div>
+    <pre id="historyModal4"></pre>
+  </div>
+
+  <script type="module" src="4way.js"></script>
+</body>
+</html>
