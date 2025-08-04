@@ -9,7 +9,7 @@ const firebaseConfig = {
   messagingSenderId: "706055335339",
   appId: "1:706055335339:web:e64c0697b2aa08516c76ee",
   measurementId: "G-GQDNDYZRND",
-  databaseURL: "https://aptiv-stock-holder-default-rtdb.firebaseio.com/"
+  databaseURL: "https://aptiv-stock-holder-default-rtdb.firebaseio.com"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -128,4 +128,5 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('todayProd4').addEventListener('input', calculateStock4);
   calculateStock4();
   view4WayHistory();
+
 });
